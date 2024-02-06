@@ -1,6 +1,6 @@
 export function NoteCard() {
   return (
-    <button className="rounded-md text-left bg-slate-800 p-5 space-y-3 overflow-hidden relative">
+    <button className="rounded-md text-left bg-slate-800 p-5 space-y-3 overflow-hidden outline-none relative hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400">
       <span className="text-sm font-medium text-slate-300">
         Há 2 dias
       </span>
