@@ -1,6 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
-import { ChangeEvent, FormEvent, useState } from "react"
+import { ChangeEvent, useState } from "react"
 import { toast } from "sonner"
 
 interface NewNoteCardProps {
@@ -24,9 +24,7 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
     }
   }
 
-  function handleSaveNote(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-
+  function handleSaveNote() {
     onNoteCreated(content)
 
     setContent("")
@@ -61,7 +59,7 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
             <X className="size-5" />
           </Dialog.Close>
 
-          <form onSubmit={handleSaveNote} className="flex-1 flex flex-col">
+          <form className="flex-1 flex flex-col">
             <div className="flex flex-1 flex-col gap-3 p-5">
               <span className="text-sm font-medium text-slate-300">
                 Adicionar nota
@@ -97,7 +95,8 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
               )
               : (
                 <button 
-                  type="submit"
+                  type="button"
+                  onClick={handleSaveNote}
                   className="w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-none font-medium hover:bg-lime-500"
                 >
                   Salvar nota
