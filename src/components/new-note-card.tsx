@@ -39,6 +39,10 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
     setIsRecording(true)
   }
 
+  function handleStopRecording() {
+    setIsRecording(false)
+  }
+
   return (
     <Dialog.Root>
       <Dialog.Trigger className="rounded-md flex flex-col bg-slate-700 text-left p-5 gap-3 outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400">
@@ -85,6 +89,7 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
               isRecording ? (
                 <button 
                   type="button"
+                  onClick={handleStopRecording}
                   className="w-full bg-slate-900 py-4 text-center text-sm text-slate-300 outline-none font-medium hover:text-slate-100"
                 >
                   Gravando! (clique p/ interromper)
