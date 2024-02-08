@@ -1,6 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
-import { MouseEvent, ChangeEvent, FormEvent, useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 import { toast } from "sonner"
 
 interface NewNoteCardProps {
@@ -35,7 +35,7 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
     toast.success("Nota criada com sucesso!")
   }
 
-  function handleStartRecording(event: MouseEvent<HTMLButtonElement>) {
+  function handleStartRecording() {
     setIsRecording(true)
   }
 
@@ -66,7 +66,7 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
               {shouldShowOnboarding ? 
                 (
                   <p className="text-sm leading-6 text-slate-400">
-                    Comece <button onClick={handleStartRecording} className="font-medium text-lime-400 hover:underline">gravando uma nota</button> em áudio ou se preferir <button onClick={handleStartEditor} className="font-medium text-lime-400 hover:underline">utilize apenas texto</button>.
+                    Comece <button type="button" onClick={handleStartRecording} className="font-medium text-lime-400 hover:underline">gravando uma nota</button> em áudio ou se preferir <button type="button" onClick={handleStartEditor} className="font-medium text-lime-400 hover:underline">utilize apenas texto</button>.
                   </p>
                 ) 
                 : 
@@ -84,7 +84,7 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
             {
               isRecording ? (
                 <button 
-                  type="submit"
+                  type="button"
                   className="w-full bg-slate-900 py-4 text-center text-sm text-slate-300 outline-none font-medium hover:text-slate-100"
                 >
                   Gravando! (clique p/ interromper)
