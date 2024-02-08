@@ -25,6 +25,8 @@ export function NewNoteCard({ onNoteCreated }:NewNoteCardProps) {
   }
 
   function handleSaveNote() {
+    if (content === "") return
+    
     onNoteCreated(content)
 
     setContent("")
