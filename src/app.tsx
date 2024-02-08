@@ -9,6 +9,15 @@ export function App() {
     {id: 2, date: new Date(), content: "Nota 2"}
   ])
 
+  function onNoteCreated(content: string) {
+    const newNote = {
+      id: Math.random(),
+      date: new Date(),
+      content,
+    }
+    setNotes([newNote, ...notes])
+  }
+
   return (
     <div className="mx-auto max-w-6xl my-12 space-y-6">
       <img src={logo} alt="NLW Expert"/>
