@@ -29,12 +29,12 @@ As anotações podem ser adicionadas via texto ou aúdio, deletadas ou filtradas
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- <a href='https://vitejs.dev' target="_blank">Vite</a>
-- <a href='https://react.dev/reference/react' target="_blank">React</a>
-- <a href='https://www.typescriptlang.org' target="_blank">Typescript</a>
-- <a href='https://tailwindcss.com/docs/installation/framework-guides' target="_blank">Tailwind CSS</a>
-- <a href='https://www.radix-ui.com/primitives' target="_blank">Radix UI</a>
-- <a href='https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition' target="_blank">Speech Recognition API</a>
+- <a style='text-decoration: none;' href='https://vitejs.dev' target="_blank">Vite</a>
+- <a style='text-decoration: none;' href='https://react.dev/reference/react' target="_blank">React</a>
+- <a style='text-decoration: none;' href='https://www.typescriptlang.org' target="_blank">Typescript</a>
+- <a style='text-decoration: none;' href='https://tailwindcss.com/docs/installation/framework-guides' target="_blank">Tailwind CSS</a>
+- <a style='text-decoration: none;' href='https://www.radix-ui.com/primitives' target="_blank">Radix UI</a>
+- <a style='text-decoration: none;' href='https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition' target="_blank">Speech Recognition API</a>
 
 <h2 id='usage'>💡 Utilização</h2>
 
